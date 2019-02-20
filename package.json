@@ -1,18 +1,19 @@
 {
-  "name": "joi-tutor",
-  "version": "1.0.0",
-  "description": "Joi validator tutorial",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Adams Banjo",
-  "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.4",
-    "joi": "^14.3.1",
-    "lodash": "^4.17.11",
-    "morgan": "^1.9.1"
-  }
+	"name": "joi-tutor",
+	"version": "1.0.0",
+	"description": "Joi validator tutorial",
+	"main": "index.js",
+	"scripts": {
+		"start": "node app.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Adams Banjo",
+	"license": "ISC",
+	"dependencies": {
+		"body-parser": "^1.18.3",
+		"express": "^4.16.4",
+		"joi": "^14.3.1",
+		"lodash": "^4.17.11",
+		"morgan": "^1.9.1"
+	}
 }
