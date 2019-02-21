@@ -1,5 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const SchemaValidator = require('./middlewares/SchemaValidator');
+
+// we are using formatted Joi Validation error
+// pass false as argument to use a generic error
+const validateRequest = SchemaValidator(true);
 
 // generic route handler
 const genericHandler = (req, res, next) => {
@@ -10,12 +15,12 @@ const genericHandler = (req, res, next) => {
 };
 
 // create new teacher or student
-router.post('/people', genericHandler);
+router.post('/people', validateRequest, genericHandler);
 
 // change auth credentials for teachers
-router.post('/auth/edit', genericHandler);
+router.post('/auth/edit', validateRequest, genericHandler);
 
 // accept fee payments for students
-router.post('/fees/pay', genericHandler);
+router.post('/fees/pay', validateRequest, genericHandler);
 
 module.exports = router;
